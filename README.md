@@ -13,7 +13,11 @@ wnmp是windows+nginx+mysql+php的简称, 是windows平台下的nginx 网站服�
 下载WNMP
 -----------------
 
-__WNMP v0.1__ : [镜像下载](http://mirrors.boxcore.org/wnmp/wnmp_v0.1.zip)
+__WNMP v0.1__
+
+- [网盘下载](http://yunpan.cn/QhIkKZ6DiCvHK)（访问密码 b0c3）
+- [镜像下载](http://mirrors.boxcore.org/wnmp/wnmp_v0.1.zip)
+
 
 安装WNMP
 ------------------
@@ -43,7 +47,7 @@ wnmp的软件目录结构为:
 - 启动WNMP: 运行 `start_wnmp.bat`即可启动WNMP服务
 - 关闭WNMP: 运行 `stop_wnmp.bat`即可关闭WNMP服务
 
-Todu
+Todo
 ----------------------------
 - 添加绿色版的apache
 - nginx使用相对目录的配置
