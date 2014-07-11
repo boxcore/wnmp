@@ -8,7 +8,7 @@ wnmp是windows+nginx+mysql+php的简称, 是windows平台下的nginx 网站服�
 - mysql v5.5
 - php v5.5.13
 
-如果你想更换nginx, mysql或php的版本, 直接到官方网站下载, 然后把相关软件目录替换即可.
+如果你想更换nginx, mysql或php的版本, 直接到官方网站下载, 然后把相关软件目录替换即可. 本版本的WNMP套件在win8和win7下测试成功.
 
 下载WNMP
 -----------------
@@ -21,34 +21,39 @@ __WNMP v0.1__
 
 安装WNMP
 ------------------
-wnmp默认制定目录`D:\wnmp`为根目录, 如果你更改了安装目录需要修改nginx下的配置文件中有`D:\wnmp`的部分为你所要安装的目录.
-
-更改目录后需要修改的文件有:
-{你的WNMP目录}/nginx/conf下的`nginx.conf`, `wwwroot.conf`和`wwwroot.map`
+wnmp默认指定`D:\wnmp`为根目录, 如您不是把`D:\wnmp`作为为根目录,那么需要修改的文件有:
+`{WNMP目录地址}/nginx/conf/nginx.conf`, `{WNMP目录地址}/nginx/conf/wwwroot.conf`和`{WNMP目录地址}/nginx/conf/wwwroot.map`
 
 如何使用wnmp
 -----------------
+
+- __启动WNMP__: 运行 `start_wnmp.bat`
+- __关闭WNMP__: 运行 `stop_wnmp.bat`
 
 wnmp的软件目录结构为:
 ```
 ./mysql/            // MySQL目录, 默认版本5.5
     my.ini          // MySQL配置文件
 ./nginx/            // nginx目录, 默认版本1.6.0
-    nginx.exe
-    RunHiddenConsole.exe    // 后端最小化运行程序
-
+    conf/vhost/     // 虚拟域名配置目录
+    conf/nginx.conf // nginx默认配置文件
+    conf/wwwroot.conf   //默认文章配置
+    conf/wwwroot.map    // 使用map快捷匹配网站目录
 ./php/              // php软件包目录, 默认版本5.5.13
 ./www/              // web默认目录
     phpmyadmin/     // PMA
+./RunHiddenConsole.exe    // 后端最小化运行程序
 ./start_wnmp.bat    // 开启wnmp服务批处理文件
 ./stop_wnmp.bat     // 关闭wnmp服务批处理文件
 ```
 
-- 启动WNMP: 运行 `start_wnmp.bat`即可启动WNMP服务
-- 关闭WNMP: 运行 `stop_wnmp.bat`即可关闭WNMP服务
+说明
+---------------
+
 
 Todo
 ----------------------------
 - 添加绿色版的apache
 - nginx使用相对目录的配置
+- win XP下测试有路径转换错误问题
 
