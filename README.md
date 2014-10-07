@@ -13,7 +13,7 @@ wnmp是windows+nginx+mysql+php的简称, 是windows平台下的nginx 网站服�
 
 下载WNMP
 -----------------
-__WNMP Plus v2.1__ : [镜像下载](http://mirrors.mianfeibang.cn/wnmp/wnmp_plus_v2.1.zip)  
+__WNMP Plus v2.1__ : [镜像下载](http://mirrors.mianfeibang.cn/wnmp/wnmp_plus_v2.1.zip)  [360云盘(提取码：66ff)](http://yunpan.cn/cg2ZC6LEPiGT4)  
 __WNMP v0.1__ : [镜像下载](http://mirrors.mianfeibang.cn/wnmp/wnmp_v0.1.zip)  
 
 安装WNMP
