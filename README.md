@@ -63,6 +63,15 @@ wnmp的软件目录结构为:
 - 启动WAMP: 运行 `start_wamp.bat`即可启动WAMP服务
 - 关闭WAMP: 运行 `stop_wamp.bat`即可关闭WAMP服务
 
+添加环境变量
+-----------------
+右击【我的电脑】-> 选择【属性】-> 选择【高级】选项卡 ->  【环境变量】 ->  设置PATH中添加如下的环境变量配置: 
+
+`;D:\wnmp\mysql\bin;D:\wnmp\nginx;D:\wnmp\php`
+
+然后在cmd中输入`PATH=%PATH%;D:\wnmp\mysql\bin;D:\wnmp\nginx;D:\wnmp\php`使系统环境生效.
+
+
 Nginx配置网站说明
 -----------------
 
