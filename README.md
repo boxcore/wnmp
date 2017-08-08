@@ -1,5 +1,4 @@
-WNMP使用说明
-============
+# WNMP使用说明
 
 wnmp是windows+nginx+mysql+php的简称, 是windows平台下的nginx 网站服务软件. 目前网络上wnmp软件众多, 此版wnmp的nginx, mysql和php都是从官方网站下载的绿色软件包集合而成, 并对其配置进行优化打包发行.
 目前此版本的wnmp使用的服务版本号如下:  
@@ -11,21 +10,19 @@ wnmp是windows+nginx+mysql+php的简称, 是windows平台下的nginx 网站服�
 
 如果你想更换nginx, mysql或php的版本, 直接到官方网站下载, 然后把相关软件目录替换即可.
 
-下载WNMP
------------------
+## 下载WNMP
+
 - __WNMP Plus v2.1__ : [百度网盘下载](http://pan.baidu.com/s/1pK82pOf)  [备份镜像](http://mirrors.mianfeibang.cn/wnmp/wnmp_plus_v2.1.zip)   
 
 - __WNMP v0.1__ : [百度网盘下载](http://pan.baidu.com/s/1i4KjMw1) [备份镜像](http://mirrors.mianfeibang.cn/wnmp/wnmp_v0.1.zip)  
 
-安装WNMP
-------------------
+## 安装WNMP
 wnmp默认制定目录`D:\wnmp`为根目录, 如果你更改了安装目录需要修改nginx下的配置文件中有`D:\wnmp`的部分为你所要安装的目录.
 
 更改目录后您需要修改的文件有:
 {你的WNMP目录}/nginx/conf下的`nginx.conf`, `wwwroot.conf`和`wwwroot.map`
 
-如何使用wnmp
------------------
+## 如何使用wnmp
 
 wnmp的软件目录结构为:
 ```
@@ -64,8 +61,8 @@ wnmp的软件目录结构为:
 - 启动WAMP: 运行 `start_wamp.bat`即可启动WAMP服务
 - 关闭WAMP: 运行 `stop_wamp.bat`即可关闭WAMP服务
 
-添加环境变量
------------------
+## 添加环境变量
+
 右击【我的电脑】-> 选择【属性】-> 选择【高级】选项卡 ->  【环境变量】 ->  设置PATH中添加如下的环境变量配置: 
 
 `;D:\wnmp\mysql\bin;D:\wnmp\nginx;D:\wnmp\php`
@@ -73,8 +70,7 @@ wnmp的软件目录结构为:
 然后在cmd中输入`PATH=%PATH%;D:\wnmp\mysql\bin;D:\wnmp\nginx;D:\wnmp\php`使系统环境生效.
 
 
-Nginx配置网站说明
------------------
+## Nginx配置网站说明
 
 本版的WNMP的网站配置添加了map列表来遍历网站配置, 而不需要为单独一个网站配置一个配置文件, 具体实现原理可以看文件`./nginx/conf/wwwroot.conf`如:
 
@@ -111,8 +107,7 @@ server {
 
 另外注意wwwroot.map中配置的网站默认为index.php单入口, 这对框架开发很便捷, 当然, 也可以创建`./nginx/conf/vhost/*.conf`类似的文件添加网站配置文件. 
 
-Apache配置网站说明
-------------------
+## Apache配置网站说明
 
 WNMP+中的apache虚拟网站配置在文件`./apache2/conf/extra/httpd-vhosts.conf`中, 添加一个网站test.com配置如: 
 
@@ -129,7 +124,6 @@ WNMP+中的apache虚拟网站配置在文件`./apache2/conf/extra/httpd-vhosts.c
 
 
 
-Todo
--------------------------------------
-- windows下apache+nginx协同工作机制研究
+## Todo
+- [] windows下apache+nginx协同工作机制研究
 
