@@ -134,5 +134,5 @@ WNMP+中的apache虚拟网站配置在文件`./apache2/conf/extra/httpd-vhosts.c
 
 
 ## Todo
-- [] windows下apache+nginx协同工作机制研究
-
+- [ ] windows下apache+nginx协同工作机制研究
+- [x] 支持php7
