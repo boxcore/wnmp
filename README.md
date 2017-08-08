@@ -61,7 +61,9 @@ wnmp的软件目录结构为:
 - 启动WAMP: 运行 `start_wamp.bat`即可启动WAMP服务
 - 关闭WAMP: 运行 `stop_wamp.bat`即可关闭WAMP服务
 
-## 添加环境变量
+## WNMP配置
+
+### 添加环境变量
 
 右击【我的电脑】-> 选择【属性】-> 选择【高级】选项卡 ->  【环境变量】 ->  设置PATH中添加如下的环境变量配置: 
 
@@ -70,7 +72,7 @@ wnmp的软件目录结构为:
 然后在cmd中输入`PATH=%PATH%;D:\wnmp\mysql\bin;D:\wnmp\nginx;D:\wnmp\php`使系统环境生效.
 
 
-## Nginx配置网站说明
+### Nginx配置网站说明
 
 本版的WNMP的网站配置添加了map列表来遍历网站配置, 而不需要为单独一个网站配置一个配置文件, 具体实现原理可以看文件`./nginx/conf/wwwroot.conf`如:
 
@@ -107,7 +109,7 @@ server {
 
 另外注意wwwroot.map中配置的网站默认为index.php单入口, 这对框架开发很便捷, 当然, 也可以创建`./nginx/conf/vhost/*.conf`类似的文件添加网站配置文件. 
 
-## Apache配置网站说明
+### Apache配置网站说明
 
 WNMP+中的apache虚拟网站配置在文件`./apache2/conf/extra/httpd-vhosts.conf`中, 添加一个网站test.com配置如: 
 
@@ -121,6 +123,13 @@ WNMP+中的apache虚拟网站配置在文件`./apache2/conf/extra/httpd-vhosts.c
     CustomLog "d:/wnmp/logs/test-access.log" common
 </VirtualHost>
 ```
+
+
+## 其他说明
+
+### 安装PHP7说明
+
+需要使用php7以上的版本，需要安装VC14，否则会提示缺少库vcruntime140.dll。可以通过微软官方网站进行下载：[Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/zh-CN/download/details.aspx?id=48145)
 
 
 
